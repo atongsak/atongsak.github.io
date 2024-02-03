@@ -45,16 +45,50 @@
     padding-left: 0;
 }
 
+.sidebar-links a:hover {
+    background-color: #FFD933;
+}
+
 .about-links {
     font-family: 'lexenddeca';
     font-weight: 200;
     font-size: 15px;
     padding-left: 0; 
+    text-decoration: underline;
+}
+
+.link-icon img {
+    max-height: auto; 
+    width: 2em;
+    margin-right: 10px;
+}
+
+.link-icon .indiv-icon {
+    display: flex;
+    align-items: center; /* Center items vertically within indiv-icon */
+    margin-bottom: 5px; /* Add margin between indiv-icon elements */
+}
+
+.link-icon a:hover {
+    text-decoration: underline ;
+}
+
+.link-icon a {
+    display: flex;
+    align-items: center; /* Center items vertically within the anchor tags */
+    margin-bottom: 10px; /* Add margin between anchor tags */
+}
+
+.link-icon {
+    font-family: 'lexenddeca';
+    font-weight: 200; 
+    display: flex;
+    flex-direction: column;
 }
 
 ul li {
     list-style-type: none;
-    padding-left: 0;
+    padding-left: 0px;
     margin-bottom: 10px; 
 }
 
@@ -64,7 +98,7 @@ a:link, a:visited{
 }
 
 a:hover {
-    background-color: #FFD933;
+    /* background-color: #FFD933; */
     /* color: red; */
 }
 
@@ -73,10 +107,6 @@ a:hover {
     margin-left: 260px;
     margin-right: 40px;
 }
-
-/* p, h1 {
-    font-family: 'lexenddeca';
-} */
 
 h1 {
     font-family: 'lexenddeca';
@@ -96,21 +126,10 @@ h3 {
     margin-top: 0px;
 }
 
-p {
-    /* font-family: 'bevietnampro';
-    line-height: 22px;
-    font-weight: 100; */
-
-    
+p {   
     font-family: 'lexenddeca';
     line-height: 22px;
     font-weight: 200;
-}
-
-.viet {
-    font-family: 'bevietnampro';
-    line-height: 22px;
-    font-weight: 100;
 }
 
 .float-container {
@@ -143,7 +162,8 @@ p {
 }
 
 .me {
-    max-width: 500px;
+    /* max-width: 500px; */
+    max-width: 100%;
     padding-bottom: 10px;
 }
 
@@ -168,7 +188,7 @@ p {
     }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1250px) {
     .float-child {
         width: 100%; /* Set width to 100% for smaller screens */
         float: none; /* Clear the float to stack the divs */
