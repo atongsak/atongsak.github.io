@@ -250,7 +250,9 @@ p {
 
 #rig li {
     float: left;
-    margin-right: 5px;
+    margin-right: 10px;
+    height: 340px;
+    width: 340px;
 }
 
 .spacer {
