@@ -344,3 +344,8 @@ ol {
 ol .indent {
     margin-left: 60px;
 }
+
+.anim-text {
+    margin-top: 3px;
+    margin-bottom: 0px;
+}
