@@ -318,6 +318,7 @@ p {
     margin-bottom: 3px;
     font-family: 'lexenddeca';
     font-weight: 300;
+    font-size: 20px;
 }
 
 video {
@@ -333,4 +334,13 @@ video {
     width: 100%; /* Make the video responsive within its container */
     height: auto; /* Maintain the aspect ratio */
     overflow: hidden; /* Hide any overflow beyond the max-width */
+}
+
+ol {
+    font-family: 'lexenddeca';
+    font-weight: 200;
+}
+
+ol .indent {
+    margin-left: 60px;
 }
