@@ -134,16 +134,36 @@ p {
 }
 
 .float-container {
-    padding: 20px;
+    display: flex;
+    align-items: flex-start;   /* aligns text with top of image */
+    gap: 20px;                 /* space between image and text */
+    padding: 20px;             /* optional padding around container */
 }
 
-.float-child {
-    box-sizing: border-box;
-    width: 50%;
-    float: left;
-    padding: none;
-    padding-bottom: 20px;
-    /* border: 2px solid red; */
+.image-child {
+    flex: 0 0 auto;           /* do not grow, do not shrink by default */
+    max-width: 450px;         /* max width of image column */
+    width: 100%;              /* allows image to shrink on small screens */
+}
+
+.image-child img {
+    width: 100%;              /* scales image to container */
+    height: auto;
+    display: block;
+}
+
+.text-child {
+    flex: 1;                  /* takes all remaining space */
+}
+
+@media (max-width: 1250px) {
+    .float-container {
+        flex-direction: column;  /* stack items vertically */
+    }
+    .image-child,
+    .text-child {
+        width: 100%;             /* take full width */
+    }
 }
 
 .video {
