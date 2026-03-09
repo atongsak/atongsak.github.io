@@ -348,9 +348,21 @@ video {
     overflow: hidden; /* Hide any overflow beyond the max-width */
 }
 
+.smaller-video {
+    max-width: 350px;
+}
+
 .images img {
     /* max-width: 692px; */
     max-width: 700px;
+    width: 100%; /* Make the video responsive within its container */
+    height: auto; /* Maintain the aspect ratio */
+    overflow: hidden; /* Hide any overflow beyond the max-width */
+}
+
+.detailed-images img {
+    /* max-width: 692px; */
+    max-width: 100%;
     width: 100%; /* Make the video responsive within its container */
     height: auto; /* Maintain the aspect ratio */
     overflow: hidden; /* Hide any overflow beyond the max-width */
