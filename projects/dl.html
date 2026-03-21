@@ -20,29 +20,84 @@
         </div>
         <div id="content">
             <h2 class="projects-title">CS 435 - Applied Deep Learning</h2>
-            <p>Python / PyTorch / Weights & Biases</p>
-            <p>This coursework is ongoing. Here are my projects from CS 435 - Applied Deep Learning with Stefan Lee.</p>
+            <p>Python / PyTorch / <a href="https://wandb.ai/site/" target="_blank">Weights & Biases</a></p>
+            <p>
+                Here are all my projects from CS 435 - Applied Deep Learning with Stefan Lee. The course covered
+                both the mathematical foundations and implementation details behind several widely used deep learning
+                methods, drawing directly from research papers. Projects ranged from building a scalar autograd framework
+                to training a transformer-based language model.
+            </p>
+            <p>Check out the GitHub repository <a href="https://github.com/atongsak/Winter2026_CS435" target="_blank"><u>here!</u></a></p>
+            
             <div class="materials-title">Building a Scalar Autograd Framework</div>
             <p>
-                Learned about the techniques for autograd software by implementing a minimal automatic differentiation 
-                engine. This included dynamically constructing a computational graph, implementing forward and backward 
-                passes, and performing backpropagation. I also added gradient descent using the audograd system and wrote
-                unit tests to validate gradient correctness.
+                Learned core autograd techniques by building a small framework that can dynamically construct a computational
+                graph and performs backpropagation over it. This involved defining both forward and backward passes at each 
+                node, propagating gradients through the graph, and implementing gradient descent for optimization. I also
+                learned how to write unit tests for backpropagation to verify gradient correctness.
             </p>
+            <div class="images" style="max-width:500px">
+                <img src="dl/a1_compgraph.png">
+            </div>
 
             <div class="materials-title">Fully-Connected Network in PyTorch for 1D Functions</div>
             <p>
-                Implemented a fully-connected neural network in PyTorch to model 1D functions. This involved
-                defining custom datasets and a feed-forward network class, implementing the training loop, and
+                Implemented and trained a fully-connected neural network in PyTorch to model 1D functions. This involved
+                defining a custom dataset and a feed-forward network class, implementing the training loop, and
                 experimenting with network depth, activation functions, learning rate schedules, and hyperparameter tuning.
             </p>
+            <div class="images">
+                <img src="dl/a2_graphs.png">
+            </div>
 
             <div class="materials-title">Basic Convolutional Neural Networks and Logging</div>
             <p>
-                Built and trained a basic CNN with data augmentation and accuracy evaluation. Integrated Weights & Biases 
-                for experiment tracking and comparison across runs, enabling systematic analysis of model performance and
-                training behavior.
+                Built and trained a basic CNN using the MNIST dataset with data augmentation and accuracy evaluation. 
+                I learned to track experiments with <a href="https://wandb.ai/site/" target="_blank">Weights & Biases</a> to make comparisons across different runs.
             </p>
+            <div class="detailed-images">
+                <img src="dl/a3_viz.png">
+            </div>
+            <!-- <div class="images" style="max-width:500px">
+                <img src="dl/a3_comp.png">
+            </div> -->
+            
+            <div class="materials-title">Building ConvNeXt on <a href="https://www.cs.toronto.edu/~kriz/cifar.html" target="_blank">CIFAR-10</a> a Block at a Time</div>
+            <p>
+                Implemented and trained a <a href="https://arxiv.org/pdf/2201.03545" target="_blank">ConvNeXt</a> model in PyTorch, including a custom LayerNorm variant that normalizes across
+                channel dimensions for B x C x H x W tensors. Built core components such as the patchifying stem (to convert the image into a grid of patches), 
+                residual blocks with layer scaling and stochastic depth, hierarchical downsampling, and the final classification head for predicting class logits. 
+            </p>
+            <div class="detailed-images">
+                <img src="dl/a4_viz.png">
+            </div>
+
+            <div class="materials-title">Variational Autoencoders for Image Generation</div>
+            <p>
+                Built an encoder-decoder architecture with sequential stages combining residual convolutional blocks and spatial
+                downsampling. Implemented reusable components (residual blocks, downscaling, bottleneck layers), assembled the encoder,
+                and developed the corresponding decoder and full forward pass. Trained and evaluated the model on the 
+                <a href="https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html" target="_blank">CelebA</a> dataset.
+            </p>
+            <div class="images">
+                <img src="dl/a5_viz.png">
+            </div>
+
+            <div class="materials-title">Processing Sequences with Recurrent Neural Networks</div>
+            <p>
+                
+            </p>
+
+            <div class="materials-title">Sequence-to-Sequence Models with Attention</div>
+            <p>
+              
+            </p>
+
+            <div class="materials-title">Transformer-based Language Models</div>
+            <p>
+              
+            </p>
+
         </div>
     </body> 
 </html>
