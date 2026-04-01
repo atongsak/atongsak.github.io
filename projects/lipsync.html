@@ -20,7 +20,7 @@
         </div>
         <div id="content">
             <h2 class="projects-title">Auto Lip Sync Blender Add-on (WIP)</h2>
-            <p>Python / <a href="https://docs.blender.org/api/current/index.html" target="_blank">Blender API</a> / <a href="https://github.com/m-bain/whisperX" target="_blank">WhisperX</a> / <a href="https://github.com/bootphon/phonemizer" target="_blank">Phonemizer</a> / Google Colab / Facial Rigging</p>
+            <p>Python / <a href="https://docs.blender.org/api/current/index.html" target="_blank">Blender API</a> / <a href="https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/tools/nemo_forced_aligner.html" target="_blank">NeMo Forced Aligner</a> / <a href="https://github.com/bootphon/phonemizer" target="_blank">Phonemizer</a> / Google Colab / Facial Rigging</p>
             <p>
                 In a typical 3D animation workflow, characters have a library of facial poses that represent 
                 mouth shapes. To animate dialogue, animators manually place and adjust these shapes over time to match the 
@@ -28,7 +28,7 @@
             </p>
             <p>
                 For my senior capstone project, I'm developing an automatic lip sync Blender add-on 
-                that generates a first pass of lip sync animation given input audio and a phoneme-to-blendshape mapping.
+                that generates a first pass of lip sync animation from input audio and a phoneme-to-blendshape mapping.
                 The goal of this project is to accelerate the blocking stage of lip sync by providing a procedural starting 
                 point for animators to refine rather than build entirely from scratch.
             </p>
@@ -39,23 +39,20 @@
                 <img src="lipsync/system_arch.png">
             </div>
             <p>
-                Here is a visualization of the phoneme-to-viseme mapping working on a line from <i>Over the Hedge</i>. 
-                This is a test output where I used 2D viseme images instead of 3D blendshapes to verify timing and sequence 
-                accuracy. Work is still being done to ensure phoneme timing logic accounts for certain articulatory behavior.
+                Here's a compilation of test output that shows the phoneme-to-viseme mapping working on 15+ English audio clips. 
+                While debugging, I used 2D viseme images instead of 3D blendshapes to verify timing and sequence accuracy.
             </p>
-            <div class="smaller-video">
-                <video controls>
-                    <source src="lipsync/testhedge.mp4" type="video/mp4">
-                </video>
+            <div class="video">
+                <iframe title="vimeo-player" src="https://player.vimeo.com/video/1179116090?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="900" height="500" frameborder="0"    allowfullscreen></iframe>
             </div>
             <p>
-                The final deliverable for this project is a functional Blender add-on that allows users to select and process an audio file less than 25 MB,
+                The final deliverable for this project is a functional Blender add-on that allows users to select and process an audio file (up to 1+ hour duration or as user hardware allows),
                 define phoneme-to-blendshape mappings, and generate lip sync keyframes for a character rig. At this stage, the add-on is being fine-tuned to
-                create reasonable keyframes for English audio as opposed to generalizing for other languages. 
+                create reasonable keyframes for American English audio as opposed to generalizing for other languages. 
             </p>
-            <div class="images">
+            <!-- <div class="images">
                 <img src="lipsync/timeline.png">
-            </div>
+            </div> -->
         </div>
     </body> 
 </html>
