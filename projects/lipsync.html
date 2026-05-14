@@ -21,38 +21,38 @@
         <div id="content">
             <h2 class="projects-title">Auto Lip Sync Blender Add-on (WIP)</h2>
             <p>Python / <a href="https://docs.blender.org/api/current/index.html" target="_blank">Blender API</a> / <a href="https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/tools/nemo_forced_aligner.html" target="_blank">NeMo Forced Aligner</a> / <a href="https://github.com/bootphon/phonemizer" target="_blank">Phonemizer</a> / Google Colab / Facial Rigging</p>
+            <p>Check out the GitHub repository <a href="https://github.com/atongsak/auto-lip-sync" target="_blank"><u>here!</u></a></p>
             <p>
                 In a typical 3D animation workflow, characters have a library of facial poses that represent 
-                mouth shapes. To animate dialogue, animators manually place and adjust these shapes over time to match the 
+                mouth shapes. To animate dialogue, animators manually place and adjust these poses over time to match the 
                 audio. While this allows full creative control, it is also a repetitive and time-consuming process.
             </p>
             <p>
                 For my senior capstone project, I'm developing an automatic lip sync Blender add-on 
-                that generates a first pass of lip sync animation from input audio and a phoneme-to-blendshape mapping.
+                that generates a first pass of lip sync animation from input audio and a viseme-face pose mapping.
                 The goal of this project is to accelerate the blocking stage of lip sync by providing a procedural starting 
                 point for animators to refine rather than build entirely from scratch.
             </p>
             <p>At a high level, the system converts audio into timestamped phonemes and maps those phonemes to viseme 
-                blendshapes, which are then used to generate mouth animation keyframes in Blender.
+                face poses, which are then used to generate mouth animation keyframes in Blender.
             </p>
             <div class="detailed-images">
                 <img src="lipsync/system_arch.png">
             </div>
             <p>
-                Here's a compilation of test output that shows the phoneme-to-viseme mapping working on 15+ English audio clips. 
-                While debugging, I used 2D viseme images instead of 3D blendshapes to verify timing and sequence accuracy.
+                Here's a compilation of test output that compares two ASR and alignment methods: WhisperX (left) and NVIDIA NeMo Forced Aligner (right).
+                The add-on uses WhisperX, which provides better timing and alignment in these tests.
+                While debugging, I used 2D viseme images instead of 3D face poses to verify timing and sequence accuracy.
             </p>
             <div class="video">
-                <iframe title="vimeo-player" src="https://player.vimeo.com/video/1179116090?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="900" height="500" frameborder="0"    allowfullscreen></iframe>
+                <iframe title="vimeo-player" src="https://player.vimeo.com/video/1181858864?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="900" height="500" frameborder="0"    allowfullscreen></iframe>
             </div>
             <p>
-                The final deliverable for this project is a functional Blender add-on that allows users to select and process an audio file (up to 1+ hour duration or as user hardware allows),
-                define phoneme-to-blendshape mappings, and generate lip sync keyframes for a character rig. At this stage, the add-on is being fine-tuned to
-                create reasonable keyframes for American English audio as opposed to generalizing for other languages. 
+                Here's my latest progress log:
             </p>
-            <!-- <div class="images">
-                <img src="lipsync/timeline.png">
-            </div> -->
+            <div class="video">
+                <iframe title="vimeo-player" src="https://player.vimeo.com/video/1191506584?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="900" height="500" frameborder="0"    allowfullscreen></iframe>
+            </div>
         </div>
     </body> 
 </html>
